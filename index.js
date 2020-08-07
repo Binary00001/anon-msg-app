@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, "/build")));
 
 mongoose.Promise = global.Promise;
 mongoose.connect(
-  "mongodb+srv://binary00001:7EJIFynBHqwrtnVQ@cluster0.h7nse.mongodb.net/msg-app?retryWrites=true&w=majority",
+  "mongodb+srv://binary00001:{PASSWORD}@cluster0.h7nse.mongodb.net/msg-app?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
