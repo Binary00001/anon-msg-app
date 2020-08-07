@@ -11,10 +11,13 @@ const PORT = 8000;
 app.use(express.static(path.join(__dirname, "/build")));
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://http:localhost:27017", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://binary00001:7EJIFynBHqwrtnVQ@cluster0.h7nse.mongodb.net/msg-app?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
