@@ -11,7 +11,7 @@ const PORT = 8000;
 app.use(express.static(path.join(__dirname, "/build")));
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb:localhost/anon-msg-app", {
+mongoose.connect("mongodb://http:localhost:27017", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
